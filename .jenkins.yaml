@@ -1,6 +1,7 @@
 docker_name: "test/test-image-${GIT_LOCAL_BRANCH}"
 docker_tags:
   - "$THEVAR"
+  - "${GIT_LOCAL_BRANCH}"
 environment_variables:
   THEVAR: "this-is-the-var"
 git:
