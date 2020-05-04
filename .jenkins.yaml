@@ -6,8 +6,6 @@ environment_variables:
   THEVAR: "this-is-the-var"
 git:
   branch: "another_branch"
-  extensions:
-    checkout_local_branch: true
 builders:
   - script
   - docker
