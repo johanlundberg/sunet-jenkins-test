@@ -9,7 +9,12 @@ builders:
   - script
   - docker
 script:
+  - "echo \$THEVAR"
   - "echo $THEVAR"
+  - "echo ${THEVAR}"
+  - "echo \${GIT_LOCAL_BRANCH}"
+  - "echo ${GIT_LOCAL_BRANCH}"
+  - "echo $GIT_LOCAL_BRANCH"
 triggers:
   cron: "@weekly"
 clean_workspace: true
