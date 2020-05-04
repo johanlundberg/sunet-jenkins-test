@@ -1,0 +1,15 @@
+docker_name: "test/test-image-${GIT_LOCAL_BRANCH}"
+environment_variables:
+  - THEVAR: "this-is-the-var"
+git:
+  branch: "master"
+  extensions:
+    checkout_local_branch: true
+builders:
+  - script
+  - docker
+script:
+  - "echo $THEVAR"
+triggers:
+  cron: "@weekly"
+clean_workspace: true
